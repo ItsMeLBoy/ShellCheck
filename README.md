@@ -1,2 +1,2 @@
 # ShellCheck
-Nothing special except her:')
+Nothing special except her~
