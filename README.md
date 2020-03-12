@@ -1,3 +1,2 @@
 # Package needed
 + curl
-+ dnsutils
