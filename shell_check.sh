@@ -16,7 +16,7 @@ name_shell[5]="<pre align=center><form method=post>Password"
 name_shell[6]="login_shell"
 name_shell[7]="Uploader"
 name_shell[8]="uploader"
-name_shell[9]="<form method=post enctype=multipart/form-data>"
+#name_shell[9]="<form method=post enctype=multipart/form-data>"
 name_shell[11]="?dir="
 
 # color(bold)
@@ -67,7 +67,7 @@ case $a_menu in
 			elif [[ $c_shell =~ "${name_shell[3]}" || $c_shell =~ "${name_shell[4]}" || $c_shell =~ "${name_shell[5]}" || $c_shell =~ "${name_shell[6]}" ]]; then
 				echo -e " ${white}[${green}LIVE${white}] ${blue}-${white} ${l_shell} ${blue}:${green} [ ${white}Shell with password ${blue}:${red} can't show information ${green}]${white}"
 				echo $l_shell >> ShellLive.txt
-			elif [[ $c_shell =~ "${name_shell[7]}" || $c_shell =~ "${name_shell[8]}" || $c_shell =~ "${name_shell[9]}" ]]; then
+			elif [[ $c_shell =~ "${name_shell[7]}" || $c_shell =~ "${name_shell[8]}" ]]; then
 				echo -e " ${white}[${green}LIVE${white}] ${blue}-${white} ${l_shell} ${blue}:${green} [ ${yellow}This is uploader${green} ]${white}"
 				echo $l_shell >> ShellLive.txt
 			else
@@ -88,7 +88,7 @@ case $a_menu in
 		l_thread=50
 		function just_checkingShell(){
 			c_shell=$(curl -sk --connect-timeout 20 --max-time 20 --user-agent "${useragent}" -XGET "${l_shell}" -L)
-			if [[ $c_shell =~ "${name_shell[0]}" || $c_shell =~ "${name_shell[1]}" || $c_shell =~ "${name_shell[2]}" || $c_shell =~ "${name_shell[3]}" || $c_shell =~ "${name_shell[4]}" || $c_shell =~ "${name_shell[5]}" || $c_shell =~ "${name_shell[6]}" || $c_shell =~ "${name_shell[7]}" || $c_shell =~ "${name_shell[8]}" || $c_shell =~ "${name_shell[9]}" || $c_shell =~ "${name_shell[11]}" ]]; then
+			if [[ $c_shell =~ "${name_shell[0]}" || $c_shell =~ "${name_shell[1]}" || $c_shell =~ "${name_shell[2]}" || $c_shell =~ "${name_shell[3]}" || $c_shell =~ "${name_shell[4]}" || $c_shell =~ "${name_shell[5]}" || $c_shell =~ "${name_shell[6]}" || $c_shell =~ "${name_shell[7]}" || $c_shell =~ "${name_shell[8]}" || $c_shell =~ "${name_shell[11]}" ]]; then
 				echo -e " ${white}[${green}LIVE${white}] ${blue}-${white} ${l_shell}"
 				echo $l_shell >> ShellLive.txt
 			else
